@@ -1,0 +1,61 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*:before, *::after{
+    box-sizing: inherit;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+}
+p{
+    color: v.$color_parrafo;
+    font-weight: 400;
+}
+
+h1{
+    font-weight: 700;
+}
+h2,h3{
+    font-weight: 500;
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto; 
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+.boton{
+    background-color: v.$secundario;
+    color: v.$blanco;
+    border-radius: .5rem;
+    display: block;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    text-decoration: none;
+
+    @include m.tablet { 
+        display: inline-block;
+        
+     }
+}

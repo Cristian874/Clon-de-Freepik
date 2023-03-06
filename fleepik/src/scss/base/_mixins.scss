@@ -1,0 +1,38 @@
+@use 'variables' as v;
+
+@mixin telefono {
+
+    @media(min-width:v.$telefono ){
+        @content;
+
+
+    }
+}
+@mixin tablet{
+    
+    @media(min-width:v.$tablet ){
+        @content;
+
+
+    }
+}
+@mixin desktop {
+    
+    @media(min-width:v.$desktop ){
+        @content;
+        
+
+
+    }
+}
+
+@mixin scrollHorizontal {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory ;
+
+    > *{
+        scroll-snap-align: center;
+
+    }
+}

@@ -1,0 +1,86 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.creatividad{
+    margin-top: 9rem;
+    padding: 5rem 0;
+
+
+
+
+    &__heading{
+        font-size: 3rem;
+    }
+
+    &__texto{
+        padding-top: 2rem;
+        font-size: 2rem;
+        color: v.$color_parrafo;
+    }
+
+
+    &__grid{
+        display: grid;
+        grid-template-columns:repeat(4,40rem);
+        @include m.scrollHorizontal;
+        margin-top: 5rem;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include m.tablet { 
+    
+            grid-template-columns: repeat(4,1fr);
+            gap: 2rem;
+            
+         }
+    }
+
+    &__card{
+        background-color: v.$color_parrafo;
+        padding: 1rem;
+        color: v.$blanco;
+       
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    
+        text-align: center;
+        background-repeat: no-repeat;
+        height: 40rem;
+       background-position: center center;
+       object-fit: cover;
+
+
+        &:nth-child(1){
+         
+        
+           padding: 2rem;
+            background-image: url(../img/cinco.webp);
+        }
+
+        &:nth-child(2){
+                
+            background-image: url(../img/ocho.webp);
+        }
+
+        &:nth-child(3){
+            background-image: url(../img/cuatro.webp);
+        }
+        &:nth-child(4){
+            background-image: url(../img/espacio.webp);
+        }
+    }
+
+
+    &__title{
+        color: v.$blanco;
+        padding-bottom: 1rem;
+    }
+    &__numero{
+        color: v.$blanco;
+    }
+
+}

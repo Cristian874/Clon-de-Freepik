@@ -1,0 +1,97 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+
+.hero{
+    height: 100rem;
+
+    background-image: v.$hero;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: v.$blanco;
+  
+
+    &__heading{
+        font-size: 3rem;
+
+
+        @include m.tablet { 
+            font-size: 5rem;
+            
+         }
+        
+    }
+    &__texto{
+        padding: 2rem 0;
+        font-size: 2rem;
+  
+        
+    color: v.$blanco;
+  
+
+    @include m.tablet { 
+        font-size: 2.5rem;
+        
+     }
+
+    }
+ 
+
+
+
+    &__formulario{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin:  0 auto;
+    }
+
+
+    &__select,&__input{
+        padding: 2rem .5rem;
+        width: 100%;
+        background-color: v.$blanco;
+        border: none;
+
+    }
+
+    &__select{
+        
+        width: 10rem;
+
+    
+     
+        @include m.tablet { 
+            
+        width: 20rem;
+            
+         }
+        
+    }
+
+   
+    &__input{
+        width: 20rem;
+     
+
+        @include m.tablet { 
+            width: 40rem;
+         }
+         @include m.desktop { 
+            width: 60rem;
+            
+          }
+        
+  
+       
+  
+    }
+
+
+
+}

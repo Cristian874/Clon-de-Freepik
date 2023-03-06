@@ -1,0 +1,28 @@
+//fuente
+
+$fuente_principal:'Roboto', sans-serif;
+
+//mediaquery
+
+$telefono: 480px;
+$tablet:768px;
+$desktop:1024px;
+
+
+
+//colores
+
+$hero:linear-gradient(180deg, #2d2db0 -65%, #2c8cf4 110%);
+$primario:#421E76;
+$secundario:#FCA120;
+$terciario:#1273eb;
+$degradado:linear-gradient(90deg, rgba(146,205,250,0.4) 0%, rgba(199,235,255,0.4) 100%);
+$footer:#1d262d;
+$negro: #000000;
+$blanco:#ffffff;
+$precio:#2c8cf4 ;
+$color_parrafo:#3b3d3e;
+$color_imagen:linear-gradient(140deg, rgba(146,205,250,0.5) 0%, rgba(215,215,255,0.4) 100%);
+
+//Unidades
+$top: 9rem;

@@ -1,0 +1,34 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.registro{
+    background-image: v.$color_imagen;
+    padding: 2rem 0;
+    text-align: center ;
+
+
+    &__grid{
+
+        @include m.tablet { 
+            display:flex;
+            gap: 2rem;
+            align-items: center;
+             justify-content: center;
+         }
+    }
+
+
+    &__texto{
+        color: v.$negro;
+    }
+
+    &__boton{
+        background-color: v.$precio;
+       margin-top: 2rem;
+       @include m.tablet { 
+        margin-top: 0;
+        
+        }
+    }
+}

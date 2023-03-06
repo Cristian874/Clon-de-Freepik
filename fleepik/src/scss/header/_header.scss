@@ -1,0 +1,175 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header{
+
+
+
+    display: flex;
+    flex-direction: column;
+   position: fixed;
+   background-color: v.$blanco;
+   width: 100%;
+   z-index: 3;
+   padding: 2rem 0;
+
+
+    @include m.desktop { 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+
+
+        
+        &__principal{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           gap: 1rem;
+        }
+     }
+
+   
+  
+    &__contenido{
+        display:none;
+        gap: 1rem;
+        @include m.desktop { 
+            display: flex;
+            
+         }
+
+
+   
+
+    }
+ 
+    &__logotipos{
+        padding: 1rem 2rem; 
+        @include m.desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         
+            
+         }
+       
+    }
+
+
+
+   
+
+    
+   
+     &__principal{
+        gap: 2rem;
+     }
+     
+    &__img{
+        width: 5rem;
+    }
+    
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+     
+    }
+
+    &__enlace--movil{
+        @include m.desktop {
+        display: none; 
+            
+         }
+    }
+    &__icono{
+
+        width: 3rem;
+         cursor: pointer;
+
+        @include m.desktop {
+            display: none; 
+            
+         }
+
+    }
+
+
+    &__enlace--movil{
+        color: v.$negro;
+        font-size: 2rem;
+    }
+
+    &__navegacion{
+        padding-top: 5rem;
+        text-align: center;
+       display: none;
+        
+      
+        background-color: v.$negro;
+        @include m.desktop { 
+            padding-top: 0;
+            display: flex;
+            flex-direction: row;
+            background-color: unset;
+            
+            
+         }
+    }
+
+    &__navegacion--dos{
+        padding-top: 0;
+        @include m.desktop { 
+            padding: unset;
+            
+         }
+    }
+    &__enlace--movil{
+        margin-right: 2rem;
+    }
+
+    &__enlace{
+        padding-bottom: 2rem;
+        color: v.$blanco;
+        font-size: 2rem;
+        margin-right: 2rem;
+
+        display: block;
+        width: 100%;
+
+        @include m.desktop { 
+            color: v.$negro;
+            font-size: 1.8rem;
+            padding-bottom: 0;
+            width: auto;
+
+         }
+    }
+
+
+    &__enlace--precio{
+        color: v.$secundario;
+    }
+
+    &__enlace--registro{
+     border: .1rem solid v.$color_parrafo;
+     background-color: v.$precio;
+     padding: 1rem;
+     color: v.$blanco;
+     margin-top: -1rem;
+     transition-property: background-color, border,color;
+     transition-duration: 800ms;
+
+     &:hover{
+        background-color: v.$blanco;
+        border:  .1rem solid v.$secundario;
+        color: v.$negro;
+        cursor: pointer;
+     }
+    }
+
+    }
+

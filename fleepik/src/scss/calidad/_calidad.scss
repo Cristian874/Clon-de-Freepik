@@ -1,0 +1,83 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.calidad{
+
+    margin-top: 9rem;
+    text-align: center;
+
+
+
+
+
+    &__heading{
+       
+        @include m.tablet { 
+            font-size: 4rem;
+            
+         }
+    }
+
+    &__span{
+        color: v.$terciario;
+    }
+
+
+    &__texto{
+        padding-top: 2rem;
+        font-size: 2rem;
+    }
+
+
+    &__grid{
+
+        margin-top: 9rem;
+        @include m.tablet {
+            
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2rem;
+         }
+    }
+
+
+    &__card{
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        line-height: 1.5;
+    }
+
+
+    &__fondo{
+        height: auto;
+
+        @include m.tablet {
+            height: 70rem;
+       
+ 
+            
+         }
+         @include m.desktop { 
+            height:auto;
+            
+          }
+    }
+    &__img{
+        width: 4rem;
+        padding: 1rem;
+        background-image:v.$color_imagen;
+    }
+
+    &__title{
+        font-size: 2rem;
+    padding-bottom: 1rem;
+    }
+
+    &__txt{
+        font-size: 1.8rem;
+        color: v.$color_parrafo;
+    }
+}

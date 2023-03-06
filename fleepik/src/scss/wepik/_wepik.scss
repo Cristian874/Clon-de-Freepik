@@ -1,0 +1,69 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.wepik{
+
+
+   margin-top: 9rem;
+
+
+
+   &__grid{
+    @include m.tablet {
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        align-items: center;
+        
+     }
+   }
+
+
+   &__grid--azul{
+      background-image: v.$color_imagen;
+      padding:5rem 2rem;
+   }
+
+   &__titulares{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+   }
+   &__title{
+    font-weight: 800;
+    font-size: 4rem;
+   }
+
+   &__heading{
+    font-size: 2rem;
+    padding: 4rem 0;
+
+   }
+   
+   &__texto{
+  
+    line-height: 1.8;
+    @include m.tablet { 
+      width: 70%;
+     }
+   }
+   &__img{
+    width: 5rem;
+   }
+
+   &__boton{
+    background-color: v.$terciario;
+    margin-top: 4rem;
+   }
+
+
+   &__imagen{
+      margin-top: 5rem;
+      @include m.tablet { 
+         margin-top: 0;
+       }
+   }
+
+}
